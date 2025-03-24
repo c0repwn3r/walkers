@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 0.37.0
 * `MapMemory` now implements `serde::Serialize` and `serde::Deserialize` when the `serde` feature is enabled
+* `Map::new()` now takes a `Vec<&'b mut Tiles>` allowing you to render multiple 'layers' on the map. Layers are rendered bottom-to-top (that is, later layerrs in the list will be rendered on top of earlier layers)
 
 ## 0.36.0
 
