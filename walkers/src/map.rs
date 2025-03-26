@@ -319,9 +319,7 @@ impl Widget for Map<'_, '_, '_> {
                 tiles,
                 &mut meshes,
             );
-            log::debug!("rendering {} tiles", meshes.len());
             for (_, meshes) in meshes.drain() {
-                log::debug!("tiles has {} tiles", meshes.len());
                 for shape in meshes {
                     painter.add(shape);
                 }
